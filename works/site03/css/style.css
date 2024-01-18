@@ -1,0 +1,258 @@
+@charset "utf-8";
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  background-color: #f9f8f2;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+small {
+  display: block;
+}
+/* -----ローディングアニメーション----- */
+.loadinganimation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.loading_logo {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+}
+@keyframes blur_animation {
+  100% {
+    filter: blur(0px);
+  }
+}
+.bg-blur {
+  filter: blur(30px);
+  animation: 2.5s linear 1s 1 forwards blur_animation;
+}
+/* -----./ローディングアニメーション----- */
+/* -----ヒーロー----- */
+.hero {
+  height: clamp(375px, 1600 / 1920 * 100vh, 1920px);
+  background-image: url(../SVG/hero_convert.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+}
+.hero_container {
+  width: min(70%, 1720px);
+  min-width: 360px;
+  margin: 0 auto;
+  height: 100%;
+  display: grid;
+  justify-items: end;
+  align-content: center;
+}
+@supports not (display: grid) {
+  .hero_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+} 
+.hero_logo {
+  margin-bottom: 20px;
+}
+.hero_logo img {
+  display: block;
+  width: clamp(210px,26vw,340px);
+  height: auto;
+}
+.hero_brandtitle p{
+  font-size: clamp(48px,5.9vw,80px);
+  font-family: linotype-didot, serif;
+  font-weight: 700;
+  font-style: normal;
+}
+/* -----./ヒーロー----- */
+/* -----メニュー----- */
+.menu {
+  margin-bottom: 60px;
+}
+.menu ul{
+  font-size: clamp(1.6rem, 1.75vw, 2.4rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(50px, 7vw, 100px);
+}
+.menu ul a {
+  color: #000;
+  text-decoration: none;
+  font-family: linotype-didot, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* -----./メニュー----- */
+/* -----コンテンツ部----- */
+.concept {
+  text-align: center;
+}
+.section_container {
+  width: min(90%, 1720px);
+  margin: 150px auto 0;
+  padding-bottom: 100px;
+}
+.section_title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.section_title h2 {
+  font-size: clamp(3.2rem, 4.7vw, 6.4rem);
+  font-family: linotype-didot, serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.content {
+  min-width: 300px;
+  font-family: source-han-sans-japanese, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.collection {
+  background-color: #a9c5c1;
+}
+.collection h2 {
+  position: relative;
+  top: -25px;
+}
+.collection_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.collection_content.reverse {
+  flex-direction: row-reverse;
+  margin: 60px 0;
+}
+@media (max-width: 767px) {
+  .collection_content,
+  .collection_content.reverse {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+.store_link {
+  text-align: center;
+  margin-top: 10px;
+  width: 230px;
+}
+.store_link a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  line-height: 40px;
+  border: 2px solid #1f1f1f;
+}
+.store_link a:hover {
+  background-color: #1f1f1f;
+  color: #fff;
+  border: 2px solid #fff;
+  transition: 400ms;
+}
+/* -----コンテンツ部----- */
+/* -----実店舗情報----- */
+.store {
+  margin-top: 50px;
+}
+.store_list {
+  width: min(90%, 1720px);
+  margin: 0 auto;
+}
+.region {
+  text-align: center;
+  font-family: source-han-sans-japanese, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(1.6rem, 1.75vw, 2.4rem);
+  margin: 60px 0 30px;
+}
+.store_info_container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.store_info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  font-family: source-han-sans-japanese, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 80%;
+  border-top: 1px solid #1f1f1f;
+  padding: 30px 0;
+}
+.store_info > p {
+  font-weight: 700;
+  width: 100px;
+}
+.store_name {
+  width: 400px;
+}
+@media (max-width: 767px) {
+  .store_info {
+    gap: 30px;
+  }
+}
+/* -----./実店舗情報----- */
+/* -----フッター----- */
+.footer {
+  background-color: #a9c5c1;
+  margin-top: 150px;
+  height: 230px;
+}
+.footer > .section_container {
+  padding: 0;
+  margin: 0 auto;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer_content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 300px;
+}
+@media (max-width: 767px) {
+  .footer_content {
+    gap: 80px;
+  }
+}
+.sns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer small {
+  text-align: center;
+}
+/* -----./フッター----- */

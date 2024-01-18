@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>どうぶつのもり</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <h1>どうぶつのもり</h1>
+  <div class="explanation">
+    <h2>あそびかた</h2>
+    <p>画面内に現れるモンスターをクリックしてね</p>
+  </div>
+  <div class="screen">
+    <div class="count_display">
+      <p id="count">10</p>
+    </div>
+    <div id="end_message_display">
+      <p id="end_message">終了！</p>
+    </div>
+    <div class="character" id="mandragora">
+      <img src="./images/resize/mandragora.png" alt="">
+    </div>
+    <div class="character" id="mandragora2">
+      <img src="./images/resize/mandragora.png" alt="">
+    </div>
+    <div class="character" id="bird">
+      <img src="./images/resize/tonbi.png" alt="">
+    </div>
+    <div class="character" id="angel_dog">
+      <img src="./images/resize/haneinu.png" alt="">
+    </div>
+    <div class="character" id="angel_cat">
+      <img src="./images/resize/cat_smile.png" alt="">
+    </div>
+    <div class="character" id="dragon">
+      <img src="./images/resize/gold_dragon.png" alt="">
+    </div>
+    <div id="scope_cursor"></div>
+  </div>
+  <div class="btn_box">
+    <button id="btn">はじめる</button>
+  </div>
+
+  <script src="./js/jquery-3.6.3.min.js"></script>
+  <script>
+    let screen = document.querySelector('.screen');
+    let count_display = document.querySelector('#count');
+    let end_message_display = document.querySelector('#end_message_display');
+    let end_message = document.querySelector('#end_message');
+    let btn_box = document.querySelector('.btn_box');
+    let btn = document.querySelector('#btn');
+    let js = document.createElement('script');
+    let stopflg = false;
+    let timeCount = 11;
+    let timer = null;
+
+    // マウスカーソル追従
+    let scope_cursor = document.querySelector('#scope_cursor');
+    document.addEventListener('mousemove', function(e) {
+      scope_cursor.style.transform = 'translate('+e.clientX+'px, '+e.clientY+'px)';
+    });
+
+    // カウントダウン
+    function countdown() {
+      timeCount -=1;
+      console.log(timeCount)
+      count_display.innerText = timeCount;
+      if ( timeCount <= 0 ) {
+          clearInterval(timer);
+          clearInterval(dragon_emerge);
+          screen.style.pointerEvents = 'none';
+          stopflg= true;
+          create_reload_btn();
+          create_end_message();
+        };
+      };
+    
+    // 終了メッセージの表示
+    function create_end_message() {
+      end_message_display.style.display = 'block';
+    }
+    // 新しくボタンを作り変える
+    function create_reload_btn() {
+      btn.remove();
+      let reload_btn = document.createElement('button');
+      reload_btn.id = 'reload_btn';
+      reload_btn.innerText = 'もういちど';
+      reload_btn.onclick = () => {
+        location.reload();
+      };
+      btn_box.appendChild(reload_btn);
+    };
+
+    // 初回クリックでゲームスタート
+    btn.addEventListener('click', function() {
+      if(stopflg == false) {
+        timer = setInterval(countdown, 1000);
+      };
+      js.src = './js/index.js';
+      document.body.appendChild(js);
+    },{once: true}
+    );
+  </script>
+</body>
+</html>

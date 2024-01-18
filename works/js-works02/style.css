@@ -1,0 +1,56 @@
+:root {
+  font-size: 62.5%;
+}
+html, body {
+  font-family: 'Roboto mono';
+  background-color: #859db4;
+}
+h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 4.8rem;
+  margin: 30px;
+}
+p {
+  text-align: center;
+  font-size: 1.6rem;
+}
+#container {
+  background-color: #fff;
+  width: 540px;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  position: relative;
+}
+#time {
+  color: #1e31ff;
+  font-size: 6.4rem;
+  text-align: center;
+  padding: 30px;
+  border: 1px solid #a0b5c9;
+  border-radius: 20px;
+  margin: 20px;
+}
+#buttons {
+  text-align: center;
+}
+#start, #stop, #reset {
+  font-size: 3.2rem;
+  border-radius: 10px;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+#stop {
+  margin: 0 25px;
+}
+.hidden {
+  width: 437.778px;
+  height: 95.556px;
+  padding: 30px;
+  background-color: #efecec;
+  border-radius: 20px;
+  position: absolute;
+  top: 36px;
+  left: 36px;
+}

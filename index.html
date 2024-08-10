@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="css/style.css" media="all">
   <link rel="icon" href="img/favicon.ico">
   <link rel="canonical" href="URL">
+  <script src="js/p5.min.js"></script>
+  <script src="js/colorCircle.js"></script>
 </head>
 
 <body>
@@ -43,7 +45,7 @@
     <main class="content">
 
       <!-- mv -->
-      <div class="mv">
+      <div class="mv" id="mv">
         <div class="mv-container">
           <p class="mv-title">ナカオカ ホマレ</p>
           <p class="mv-subtitle">PORTFOLIO</p>
@@ -208,5 +210,9 @@
   </div>
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/script.js"></script>
+  <script>
+    	let mv = document.getElementById("mv");
+      console.log(mv.offsetWidth, mv.offsetHeight);
+  </script>
 </body>
 </html>

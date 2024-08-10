@@ -145,6 +145,7 @@ img {
   justify-content: center;
   height: 65vh;
   text-align: center;
+  position:relative;
 }
 
 .mv-container {

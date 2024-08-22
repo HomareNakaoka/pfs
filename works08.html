@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Webデザイナーナカオカ ホマレ ポートフォリオ">
+  <meta property="og:url" content="URLが入る">
+  <meta property="og:description" content="ナカオカ ホマレのポートフォリオサイトです。">
+  <meta property="og:image" content="img/ogp.png">
+  <meta name="description" content="ナカオカ ホマレのポートフォリオサイトです" />
+  <title>ナカオカ ホマレのポートフォリオ</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined">
+  <link rel="stylesheet" href="css/ress.css" media="all">
+  <link rel="stylesheet" href="css/style.css" media="all">
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="canonical" href="URLが入る">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- header -->
+    <header class="header ">
+      <div class="container">
+        <h1 class="header-logo">
+          <a href="./index.html">ナカオカ ホマレ</a>
+        </h1>
+        <nav class="gnav">
+          <ul class="gnav-list">
+            <li class="gnav-item"><a href=".#works">WORKS</a></li>
+            <!-- <li class="gnav-item"><a href="./#skill">SKILL</a></li> -->
+            <li class="gnav-item"><a href="./#about">ABOUT</a></li>
+            <li class="gnav-item"><a href="./#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <main class="content">
+
+      <article class="article">
+        <div class="article-container">
+          <h2 class="article-title">webpage-bookmarker</h2>
+          <div class="article-body">
+            <p>
+              <img src="./img/works08.jpg" alt="自主制作のWebアプリケーション">
+            </p>
+            <h3>URL</h3>
+            <p><a href="https://webpage-bookmarker.onrender.com" target="_blank" rel="noopener">https://webpage-bookmarker.onrender.com</a><br>ユーザー名：guest1<br>パスワード：bdY87xP2RTCu</p>
+            <p>※デプロイ先のRenderフリープランでは15分間アクセスが無いとサーバーがスリープ状態になります。GoogleAppScriptにて定期的にリクエストを送信するようにしていますが、不測の事態によりスリープ状態となっていた場合は2～3分時間を開けて再度アクセスしてください。</p>
+            <h3>使用技術</h3>
+            <p>HTML / CSS / JavaScript / Node.js / pug / Bootstrap / Prisma / Docker</p>
+            <h3>使用アプリ</h3>
+            <p>VisualStudioCode / Git / Github / Render</p>
+            <h3>作品紹介</h3>
+            <p>web ページのタイトルとURL を保存することを目的として、認証・投稿・保存・削除の機能を持ったアプリケーション</p>
+            <h3>なぜ作ろうと思ったか</h3>
+            <p>就職活動において利用する求人サイトが増えて求人を管理するのが難しくなったこと、また職業訓練校卒業後も学習を続けるなかで、在校中に作成した<a href="./works02.html">Google Chrome拡張機能</a>を下地に発展させようと思い作成。</p>
+            <h3>工夫したところ</h3>
+            <p>入力フォームのバリデーションや、投稿の並び替え、認証前トップページの実装など</p>
+            <h3>感想</h3>
+            <p>Node.js でHTTP サーバー構築、ルーティング処理、フロント側へのデータ受け渡しなどのバックエンド側の一連の処理を学べたことが良かったです。<br>一方でユーザーの追加機能や、ページネーションなどの一般的な機能を実装できていなかったり、データベースの設計など多くの課題を感じたので、これからも学習を継続したいと思います。</p>
+          </div>
+          <div class="home-link">
+            <a href="./#works">Works一覧へ</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="page-top" id="js-page-top">
+        <span class="material-icons-outlined">expand_less</span>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="copyright">&copy;ナカオカ ホマレ</div>
+    </footer>
+    <!-- /footer -->
+
+  </div>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
